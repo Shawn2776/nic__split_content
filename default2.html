@@ -23,7 +23,6 @@
 
       /* LARGE SCREENS */
       @media (min-width: 1201px) {
-
         .nic__split_content__h1 {
           font-size: 3rem;
           /* color: #98002e; */
@@ -85,7 +84,8 @@
           cursor: pointer;
         }
 
-        #nic__split_content__left__button_one, #nic__split_content__left__button_two {
+        #nic__split_content__left__button_one,
+        #nic__split_content__left__button_two {
           width: 80%;
         }
 
@@ -175,7 +175,7 @@
           transform: rotate(-45deg);
           -webkit-transform: rotate(-45deg);
         }
-        
+
         .nic__split_content__right > button:nth-child(4) {
           border-bottom: 1px solid white;
         }
@@ -244,8 +244,12 @@
               cross boundaries and infuse NIC academics.
             </em>
           </p>
-          <button id="nic__split_content__left__button_one">Browse Academic Programs</button>
-          <button id="nic__split_content__left__button_two">Browse Technical Programs</button>
+          <button id="nic__split_content__left__button_one">
+            Browse Academic Programs
+          </button>
+          <button id="nic__split_content__left__button_two">
+            Browse Technical Programs
+          </button>
         </div>
       </div>
 
@@ -271,129 +275,170 @@
     </div>
 
     <script>
-      document.getElementById("nic__split_content__right_one").addEventListener(
-        "mouseover",
-        function () {
-          document.getElementById("nic__split_content").style.backgroundImage =
-            "url('bg2.jpeg')";
-        },
-        false
-      );
-      document.getElementById("nic__split_content__right_one").addEventListener(
-        "mouseout",
-        function () {
-          document.getElementById("nic__split_content").style.backgroundImage =
-            "";
-        },
-        false
-      );
+      const container = document.querySelector(".nic__split_content");
 
-      document.getElementById("nic__split_content__right_two").addEventListener(
-        "mouseover",
-        function () {
-          document.getElementById("nic__split_content").style.backgroundImage =
-            "url('overview.jpg')";
-          document.getElementById("nic__split_content").style.backgroundImage =
-            "url('overview.jpg')";
-        },
-        false
-      );
-      document.getElementById("nic__split_content__right_two").addEventListener(
-        "mouseout",
-        function () {
-          document.getElementById("nic__split_content").style.backgroundImage =
-            "";
-        },
-        false
-      );
+      const observer = new ResizeObserver((entries) => {
+        const mainElement = entries[0];
+        const isLarge = mainElement.contentRect.width > 1201;
 
-      document
-        .getElementById("nic__split_content__right_three")
-        .addEventListener(
-          "mouseover",
-          function () {
-            document.getElementById(
-              "nic__split_content"
-            ).style.backgroundImage = "url('NICStudents.jpg')";
-          },
-          false
-        );
-      document
-        .getElementById("nic__split_content__right_three")
-        .addEventListener(
-          "mouseout",
-          function () {
-            document.getElementById(
-              "nic__split_content"
-            ).style.backgroundImage = "";
-          },
-          false
-        );
+        
 
-      document
-        .getElementById("nic__split_content__right_four")
-        .addEventListener(
-          "mouseover",
-          function () {
-            document.getElementById(
-              "nic__split_content"
-            ).style.backgroundImage =
-              "url('cropped-portrait-of-a-young-male-university-studen-2022-12-30-00-29-25-utc-900x900.jpg')";
-          },
-          false
-        );
-      document
-        .getElementById("nic__split_content__right_four")
-        .addEventListener(
-          "mouseout",
-          function () {
-            document.getElementById(
-              "nic__split_content"
-            ).style.backgroundImage = "";
-          },
-          false
-        );
 
-      document
-        .getElementById("nic__split_content__right_five")
-        .addEventListener(
-          "mouseover",
-          function () {
-            document.getElementById(
-              "nic__split_content"
-            ).style.backgroundImage =
-              "url('220316_ParkerTourGEDSTs-133-2552x2551.jpg')";
-          },
-          false
-        );
-      document
-        .getElementById("nic__split_content__right_five")
-        .addEventListener(
-          "mouseout",
-          function () {
-            document.getElementById(
-              "nic__split_content"
-            ).style.backgroundImage = "";
-          },
-          false
-        );
+        if (isLarge) {
+          document
+            .getElementById("nic__split_content__right_one")
+            .addEventListener("mouseover", function () {
+                document.getElementById("nic__split_content").style.backgroundImage = "url('bg2.jpeg')";
+              },
+              false
+            );
 
-      document.getElementById("nic__split_content__right_six").addEventListener(
-        "mouseover",
-        function () {
-          document.getElementById("nic__split_content").style.backgroundImage =
-            "url('900x900_young-plumber-or-technician-installing-or-repairin-2021-09-24-03-09-40-utc.jpg')";
-        },
-        false
-      );
-      document.getElementById("nic__split_content__right_six").addEventListener(
-        "mouseout",
-        function () {
-          document.getElementById("nic__split_content").style.backgroundImage =
-            "";
-        },
-        false
-      );
+          document
+            .getElementById("nic__split_content__right_one").addEventListener("mouseout", function () {
+                document.getElementById(
+                  "nic__split_content"
+                ).style.backgroundImage = "";
+              },
+              false
+            );
+
+          document
+            .getElementById("nic__split_content__right_two")
+            .addEventListener(
+              "mouseover",
+              function () {
+                document.getElementById(
+                  "nic__split_content"
+                ).style.backgroundImage = "url('overview.jpg')";
+                document.getElementById(
+                  "nic__split_content"
+                ).style.backgroundImage = "url('overview.jpg')";
+              },
+              false
+            );
+          document
+            .getElementById("nic__split_content__right_two")
+            .addEventListener(
+              "mouseout",
+              function () {
+                document.getElementById(
+                  "nic__split_content"
+                ).style.backgroundImage = "";
+              },
+              false
+            );
+
+          document
+            .getElementById("nic__split_content__right_three")
+            .addEventListener(
+              "mouseover",
+              function () {
+                document.getElementById(
+                  "nic__split_content"
+                ).style.backgroundImage = "url('NICStudents.jpg')";
+              },
+              false
+            );
+          document
+            .getElementById("nic__split_content__right_three")
+            .addEventListener(
+              "mouseout",
+              function () {
+                document.getElementById(
+                  "nic__split_content"
+                ).style.backgroundImage = "";
+              },
+              false
+            );
+
+          document
+            .getElementById("nic__split_content__right_four")
+            .addEventListener(
+              "mouseover",
+              function () {
+                document.getElementById(
+                  "nic__split_content"
+                ).style.backgroundImage =
+                  "url('cropped-portrait-of-a-young-male-university-studen-2022-12-30-00-29-25-utc-900x900.jpg')";
+              },
+              false
+            );
+          document
+            .getElementById("nic__split_content__right_four")
+            .addEventListener(
+              "mouseout",
+              function () {
+                document.getElementById(
+                  "nic__split_content"
+                ).style.backgroundImage = "";
+              },
+              false
+            );
+
+          document
+            .getElementById("nic__split_content__right_five")
+            .addEventListener(
+              "mouseover",
+              function () {
+                document.getElementById(
+                  "nic__split_content"
+                ).style.backgroundImage =
+                  "url('220316_ParkerTourGEDSTs-133-2552x2551.jpg')";
+              },
+              false
+            );
+          document
+            .getElementById("nic__split_content__right_five")
+            .addEventListener(
+              "mouseout",
+              function () {
+                document.getElementById(
+                  "nic__split_content"
+                ).style.backgroundImage = "";
+              },
+              false
+            );
+
+          document
+            .getElementById("nic__split_content__right_six")
+            .addEventListener(
+              "mouseover",
+              function () {
+                document.getElementById(
+                  "nic__split_content"
+                ).style.backgroundImage =
+                  "url('900x900_young-plumber-or-technician-installing-or-repairin-2021-09-24-03-09-40-utc.jpg')";
+              },
+              false
+            );
+
+          document
+            .getElementById("nic__split_content__right_six")
+            .addEventListener(
+              "mouseover",
+              function () {
+                document.getElementById(
+                  "nic__split_content__left"
+                ).style.display = "none";
+              },
+              false
+            );
+
+          document
+            .getElementById("nic__split_content__right_six")
+            .addEventListener(
+              "mouseout",
+              function () {
+                document.getElementById(
+                  "nic__split_content"
+                ).style.backgroundImage = "";
+              },
+              false
+            );
+        }
+      });
+
+      observer.observe(container);
     </script>
   </body>
 </html>
