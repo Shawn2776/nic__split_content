@@ -5,217 +5,1092 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://use.typekit.net/voj6uit.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://test.nic.edu/media/nic-main/css/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://test.nic.edu/media/nic-main/css/styles.css">
     <style>
-      .whole__main_content {
-        position: relative;
-      }
-
-      .whole__main_content::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url('bg2.jpeg');
-        filter: brightness(70%);
-        background-repeat: no-repeat; /* Do not repeat the image */
-        background-size: cover; /* Resize the background image to cover the entire container */
-      }
-
-      @media (max-width: 1119px) {
-        .whole__main_content {
+      /* MOBILE SCREENS */
+      @media (max-width: 736px) {
+        .nic__split_content {
           display: flex;
           flex-flow: column;
+          align-items: center;
+          height: 100vh;
+          width: 100%;
           color: white;
         }
 
-        .left__main_content {
+        .nic__split_content__h1 {
+          margin-bottom: 40px;
+          margin-top: 40px;
+        }
+
+        .nic__split_container__left {
+          height: 50%;
+          width: 100%;
+          display: flex;
+          flex-flow: column;
+          background-image: url('images/bg1.jpg');
+          background-repeat: no-repeat; /* Do not repeat the image */
+          background-size: cover; /* Resize the background image to cover the entire container */
+          /* filter: brightness(60%); */
+          background-position: center;
+        }
+
+        .nic__split_content__left__alternate_display__one {
+          display: none;
+        }
+
+        .nic__split_content__left__alternate_display__two {
+          display: none;
+        }
+
+        .nic__split_content__left__alternate_display__three {
+          display: none;
+        }
+
+        .nic__split_content__left__alternate_display__four {
+          display: none;
+        }
+
+        .nic__split_content__left__alternate_display__five {
+          display: none;
+        }
+
+        .nic__split_content__left__alternate_display__six {
+          display: none;
+        }
+
+        .nic__split_content__left {
+          display: flex;
+          flex-flow: column;
+          justify-content: space-evenly;
+          align-items: center;
+          background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .nic__split_content__left > p {
+          width: 40%;
+          text-align: left;
+          margin-bottom: 40px;
+        }
+
+        .nic__split_content__left > button {
+          width: 90%;
+          height: 3rem;
+          background-color: #98002e;
+          color: #fff;
+        }
+
+        #nic__split_content__left__button_one {
+          
+        }
+
+        #nic__split_content__left__button_one:hover, #nic__split_content__left__button_two:hover {
+          
+        }
+
+        .nic__split_container__right {
+          background-color: black;
+          height: 50%;
+          width: 100%;
+        }
+
+        .nic__split_content__right {
+          display: flex;
+          flex-flow: column;
+        }
+
+        .nic__split_content__right > button {
+          color: #fff;
+          background-color: transparent;
+          height: 4rem;
+          border: none;
+          text-align: start;
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+
+        .nic__split_content__right > button:hover {
+          color: #98002e;
+        }
+
+        /* Button One Settings */
+
+        .nic__split_content__right > button:nth-child(1) {
+          border-bottom: 1px solid #fff;
+
+        }
+
+        .nic__split_content__right > button:nth-child(2) {
+          border-bottom: 1px solid #fff;
+        }
+
+        .nic__split_content__right > button:nth-child(3) {
+          border-bottom: 1px solid #fff;
+        }
+
+        .nic__split_content__right > button:nth-child(4) {
+          border-bottom: 1px solid #fff;
+        }
+
+        .nic__split_content__right > button:nth-child(5) {
+          border-bottom: 1px solid #fff;
+        }
+      }
+
+      /* MEDIUM SCREENS */
+      @media (min-width: 737px) and  (max-width: 1200px) {
+        .nic__split_content {
+          display: flex;
+          min-height: 75vh;
+          color: #fff;
+          background-image: url('images/bg1.jpg');
+          
+          background-repeat: no-repeat; /* Do not repeat the image */
+          background-size: cover; /* Resize the background image to cover the entire container */
+          /* filter: brightness(60%); */
+          background-position: center;
+        }
+
+        .nic__split_content__h1 {
+          font-size: 2rem;
+        }
+
+        .nic__split_container__left {
+          width: 50%;
           display: flex;
           justify-content: center;
           align-items: center;
-          position: relative;
-        }
-      }
-
-      @media (min-width: 1120px) {
-        .whole__main_content {
-          display: flex;
-          height: 100vh;
-
-          color: white;
+          background-color: rgba(0, 0, 0, 0.4);
         }
 
-        .left__main_content {
+        .nic__split_content__left__alternate_display__one {
+          display: none;
+        }
+
+        .nic__split_content__left__alternate_display__two {
+          display: none;
+        }
+
+        .nic__split_content__left__alternate_display__three {
+          display: none;
+        }
+
+        .nic__split_content__left__alternate_display__four {
+          display: none;
+        }
+
+        .nic__split_content__left__alternate_display__five {
+          display: none;
+        }
+
+        .nic__split_content__left__alternate_display__six {
+          display: none;
+        }
+
+        .nic__split_content__left {
           display: flex;
           flex-flow: column;
           justify-content: center;
+          align-items: center;
+        }
+
+        .nic__split_content__left > p {
+          width: 80%;
+          margin-bottom: 40px;
+        }
+
+        .nic__split_content__left > button {
+          width: 95%;
+          height: 3rem;
+          margin-bottom: 5px;
+          background-color: #98002e;
+          color: #fff;
+          font-size: medium;
+        }
+
+        #nic__split_content__left__button_one {
+          
+        }
+
+        #nic__split_content__left__button_one:hover, #nic__split_content__left__button_two:hover {
+          background-color: #fff;
+          color: #98002e;
+        }
+
+        .nic__split_container__right {
+          background-color: rgba(0, 0, 0, 0.6);
+          width: 50%;
+        }
+
+        .nic__split_content__right {
+          display: flex;
+          flex-flow: column;
+          height: 100%;
+          justify-content: center;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+
+        .nic__split_content__right > button {
+          width: 100%;
+          height: 15%;
+          background-color: transparent;
+          color: white;
+          font-weight: bold;
+          font-size: 1rem;
+          text-align: left;
+          border: none;
+        }
+
+        .nic__split_content__right > button:hover {
+          color: #98002e;
+        }
+
+        /* Button One Settings */
+
+        .nic__split_content__right > button:nth-child(1) {
+          border-bottom: 1px solid gray;
+        }
+
+        .nic__split_content__right > button:nth-child(2) {
+          border-bottom: 1px solid gray;
+        }
+
+        .nic__split_content__right > button:nth-child(3) {
+          border-bottom: 1px solid gray;
+        }
+
+        .nic__split_content__right > button:nth-child(4) {
+          border-bottom: 1px solid gray;
+        }
+
+        .nic__split_content__right > button:nth-child(5) {
+          border-bottom: 1px solid gray;
+        }
+      }
+
+      /* LARGE SCREENS */
+      @media (min-width: 1201px) {
+        .nic__split_content__h1 {
+          font-size: 3rem;
+          /* color: #98002e; */
+        }
+
+        .nic__split_content {
+          display: flex;
+          height: 100vh;
+          background-image: url("images/bg1.jpg");
+          background-repeat: no-repeat; /* Do not repeat the image */
+          background-size: cover; /* Resize the background image to cover the entire container */
+          /* filter: brightness(60%); */
+          background-position: center;
+          transition-delay: 0.2s;
+          transition: 0.5s;
+          color: white;
+        }
+
+        .nic__split_container__left {
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
+          align-items: center;
+          width: 50%;
+          background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .nic__split_content__left__alternate_display__one {
+          display: flex;
+          flex-flow: column;
+          justify-content: flex-end;
+          align-items: end;
+          font-size: x-large;
+          /* border: 1px solid red; */
+          width: 80%;
+          height: 100%;
+          margin-bottom: 30px;
+        }
+
+        .nic__split_content__left__alternate_display__two {
+          display: flex;
+          flex-flow: column;
+          justify-content: flex-end;
+          align-items: end;
+          font-size: x-large;
+          /* border: 1px solid red; */
+          width: 80%;
+          height: 100%;
+          margin-bottom: 30px;
+        }
+
+        .nic__split_content__left__alternate_display__three {
+          display: flex;
+          flex-flow: column;
+          justify-content: flex-end;
+          align-items: end;
+          font-size: x-large;
+          /* border: 1px solid red; */
+          width: 80%;
+          height: 100%;
+          margin-bottom: 30px;
+        }
+
+        .nic__split_content__left__alternate_display__four {
+          display: flex;
+          flex-flow: column;
+          justify-content: flex-end;
+          align-items: end;
+          font-size: x-large;
+          /* border: 1px solid red; */
+          width: 80%;
+          height: 100%;
+          margin-bottom: 30px;
+        }
+
+        .nic__split_content__left__alternate_display__five {
+          display: flex;
+          flex-flow: column;
+          justify-content: flex-end;
+          align-items: end;
+          font-size: x-large;
+          /* border: 1px solid red; */
+          width: 80%;
+          height: 100%;
+          margin-bottom: 30px;
+        }
+
+        .nic__split_content__left__alternate_display__six {
+          display: flex;
+          flex-flow: column;
+          justify-content: flex-end;
+          align-items: end;
+          font-size: x-large;
+          /* border: 1px solid red; */
+          width: 80%;
+          height: 100%;
+          margin-bottom: 30px;
+        }
+
+        .nic__split_content__left {
+          display: flex;
+          flex-flow: column;
+          width: 45%;
+          justify-content: center;
           align-items: start;
-          position: relative;
-          max-width: 50%;
-          padding-left: 300px;
-          padding-right: 60px;
+          height: 100%;
+          /* margin-top: 10%; */
         }
 
-        .left__main_content > h1 {
-          margin-bottom: 40px;
+        .nic__split_content__left > p {
+          font-size: 1.5rem;
         }
 
-        .left__main_content > p {
-          margin-bottom: 40px;
-          padding-right: 90px;
-        }
-
-        .left__main_content > button {
-          padding: 15px 25px;
+        .nic__split_content__left > button {
           background-color: #98002e;
           color: white;
-          margin-bottom: 5px;
+          font-size: 1rem;
+          padding: 20px 20px;
+          cursor: pointer;
         }
 
-        .right__main_content {
+        #nic__split_content__left__button_one {
+          margin-top: 30px;
+          margin-bottom: 10px;
+        }
+
+        #nic__split_content__left__button_one:hover {
+          background-color: white;
+          color: #98002e;
+          transition: 0.5s;
+          cursor: pointer;
+        }
+
+        #nic__split_content__left__button_one,
+        #nic__split_content__left__button_two {
+          width: 80%;
+        }
+
+        #nic__split_content__left__button_two:hover {
+          background-color: white;
+          color: #98002e;
+          transition: 0.5s;
+        }
+
+        .nic__split_container__right {
+          display: flex;
+          width: 50%;
+        }
+
+        .nic__split_content__right {
           position: relative;
-          display:flex;
+          display: flex;
           /* justify-content: center;
           align-items: center; */
           flex-wrap: wrap;
-          padding: 300px 150px;
-          background-color: rgba(0,0,0,.5);
-    color: #fff;
-    width: 50%;
+          padding: 250px 50px;
+          background-color: rgba(0, 0, 0, 0.7);
+          color: #fff;
+          width: 100%;
         }
 
-        .right__main_content > button {
+        .nic__split_content__right > button {
           background-color: transparent;
-          color: white;
           width: 50%;
-          /* height: 7rem; */
-          box-sizing: border-box;
           border: none;
+          color: white;
           font-size: larger;
+          -webkit-transition: all .5s ease-in-out;
+-moz-transition: all .5s ease-in-out;
+transition: all .5s ease-in-out;
         }
 
-        .right__main_content > button:nth-child(1) {
-          border-right: 1px solid #847c76;
-          border-bottom: 1px solid #847c76;
-          
+        /* Button One Settings */
+
+        .nic__split_content__right > button:nth-child(1) {
+          /* Border CSS*/
+          border-right: 1px solid white;
+          border-bottom: 1px solid white;
         }
 
-        .right__main_content > button:nth-child(1):hover {
+        .nic__split_content__right > button:nth-child(1):hover {
+          /* Background CSS*/
           background-color: #98002e;
-          transition: 0.5s;
-          color: black;
         }
 
-        .button__brown_button_one:hover #whole__main__brown {
-         
-        background-image: url('bg.jpeg');
-        filter: brightness(70%);
-        background-repeat: no-repeat; /* Do not repeat the image */
-        background-size: cover; /* Resize the background image to cover the entire container */
+        .nic__split_content__right > button:nth-child(1):hover::after {
+          /* Arrow CSS*/
+          content: "";
+          border: solid white;
+          border-width: 0 4px 4px 0;
+          display: inline-block;
+          padding: 5px;
+          margin-left: 5px;
+          transform: rotate(-45deg);
+          -webkit-transform: rotate(-45deg);
         }
 
-        .right__main_content > button:nth-child(2) {
-          border-bottom: 1px solid #847c76;
-          transition: 0.5s;
-          
+        /* Button Two Settings */
+
+        .nic__split_content__right > button:nth-child(2) {
+          border-bottom: 1px solid white;
         }
 
-        .right__main_content > button:nth-child(2):hover {
+        .nic__split_content__right > button:nth-child(2):hover {
           background-color: #98002e;
-          transition: 0.5s;
-          color: black
         }
 
-        .right__main_content > button:nth-child(3) {
-          border-right: 1px solid #847c76;
-          border-bottom: 1px solid #847c76;
-          transition: 0.5s;
-          
+        .nic__split_content__right > button:nth-child(2):hover::after {
+          content: "";
+          border: solid white;
+          border-width: 0 3px 3px 0;
+          display: inline-block;
+          padding: 5px;
+          margin-left: 5px;
+          transform: rotate(-45deg);
+          -webkit-transform: rotate(-45deg);
         }
 
-        .right__main_content > button:nth-child(3):hover {
+        /* Button Three Settings */
+
+        .nic__split_content__right > button:nth-child(3) {
+          border-right: 1px solid white;
+          border-bottom: 1px solid white;
+        }
+
+        .nic__split_content__right > button:nth-child(3):hover {
           background-color: #98002e;
-          transition: 0.5s;
-          color: black
         }
 
-        .right__main_content > button:nth-child(3):hover {
+        .nic__split_content__right > button:nth-child(3):hover::after {
+          content: "";
+          border: solid white;
+          border-width: 0 3px 3px 0;
+          display: inline-block;
+          padding: 5px;
+          margin-left: 5px;
+          transform: rotate(-45deg);
+          -webkit-transform: rotate(-45deg);
+        }
+
+        /* Button Four Settings */
+
+        .nic__split_content__right > button:nth-child(4) {
+          border-bottom: 1px solid white;
+        }
+
+        .nic__split_content__right > button:nth-child(4):hover {
           background-color: #98002e;
-          transition: 0.5s;
-          color: black
         }
 
-        .right__main_content > button:nth-child(4) {
-          border-bottom: 1px solid #847c76;
-          transition: 0.5s;
-          
+        .nic__split_content__right > button:nth-child(4):hover::after {
+          content: "";
+          border: solid white;
+          border-width: 0 3px 3px 0;
+          display: inline-block;
+          padding: 5px;
+          margin-left: 5px;
+          transform: rotate(-45deg);
+          -webkit-transform: rotate(-45deg);
         }
 
-        .right__main_content > button:nth-child(4):hover {
+        /* Button Five Settings */
+
+        .nic__split_content__right > button:nth-child(5) {
+          border-right: 1px solid white;
+        }
+
+        .nic__split_content__right > button:nth-child(5):hover {
           background-color: #98002e;
-          transition: 0.5s;
-          color: black
         }
 
-        .right__main_content > button:nth-child(5) {
-          border-right: 1px solid #847c76;
-          transition: 0.5s;
-          
+        .nic__split_content__right > button:nth-child(5):hover::after {
+          content: "";
+          border: solid white;
+          border-width: 0 3px 3px 0;
+          display: inline-block;
+          padding: 5px;
+          margin-left: 5px;
+          transform: rotate(-45deg);
+          -webkit-transform: rotate(-45deg);
         }
 
-        .right__main_content > button:nth-child(5):hover {
+        /* Button Six Settings */
+
+        .nic__split_content__right > button:nth-child(6):hover {
           background-color: #98002e;
-          transition: 0.5s;
-          color: black
         }
 
-        .right__main_content > button:nth-child(6) {}
-
-        .right__main_content > button:nth-child(6):hover {
-          background-color: #98002e;
-          transition: 0.5s;
-          color: black
-
-          
-        }
-
-        .button__brown_button {
-          font-weight: bold;
+        .nic__split_content__right > button:nth-child(6):hover::after {
+          content: "";
+          border: solid white;
+          border-width: 0 3px 3px 0;
+          display: inline-block;
+          padding: 5px;
+          margin-left: 5px;
+          transform: rotate(-45deg);
+          -webkit-transform: rotate(-45deg);
         }
       }
     </style>
   </head>
   <body>
-    <div id="whole__main__brown" class="whole__main_content">
-      <div class="container left__main_content">
-        <!-- Left Side on Desktop / Top on Mobile-->
-        <h1>
-          Academics at<br />North Idaho College
-        </h1>
-        <p>
-          <em>Innovative teaching, rigorous scholarship and diverse perspectives
-            cross boundaries and infuse NIC academics.</em>
-        </p>
-        <button>Browse Academic Programs</button>
-        <button>Browse Technical Programs</button>
+    <div id="nic__split_content" class="nic__split_content">
+      <div class="nic__split_container__left">
+        <div id="nic__split_content__left__alternate_display__one" class="nic__split_content__left__alternate_display__one" style="display: none;">
+          <p>
+            NIC Has earned a global reputation for its innovative undergradute educational experience, based in the college and rooted in its flexibile, yet academically rigorous Open Cirriculum
+          </p>
+        </div>
+        <div id="nic__split_content__left__alternate_display__two" class="nic__split_content__left__alternate_display__two" style="display: none;">
+          <p>
+            With innovation, student-centered academic training and a diverse and collaborative culture, NIC prepares graduate students to become leaders in their fields inside and outside of the college.
+          </p>
+        </div>
+        <div id="nic__split_content__left__alternate_display__three" class="nic__split_content__left__alternate_display__three" style="display: none;">
+          <p>
+            NIC's renowned medical school offers an integrated medical cirriculum alongside immersive clinical experiences, where students work with physician-scientitsts on the leading edge of biomedical innovation.
+          </p>
+        </div>
+        <div id="nic__split_content__left__alternate_display__four" class="nic__split_content__left__alternate_display__four" style="display: none;">
+          <p>
+            NIC educates future leaders in the fundamentals of engineering in an environment of collaborative, world-class research centered on solving pressing global challenges.
+          </p>
+        </div>
+        <div id="nic__split_content__left__alternate_display__five" class="nic__split_content__left__alternate_display__five" style="display: none;">
+          <p>
+            Throughout its teaching and research, NIC trains future public health leaders, advances knowledge on pressing health challenges and enhances population health and well-being.
+          </p>
+        </div>
+        <div id="nic__split_content__left__alternate_display__six" class="nic__split_content__left__alternate_display__six" style="display: none;">
+          <p>
+            NIC's School of blah blah blah offers executive education programs designed to advance the careers of accomplished professionals from across the globe.
+          </p>
+        </div>
+        <div class="nic__split_content__left" id="nic__split_content__left">
+          <!-- Left Side on Desktop / Top on Mobile-->
+          <h1 class="nic__split_content__h1">
+            Academics at
+            <br />
+            North Idaho College
+          </h1>
+          <p>
+            <em>
+              Innovative teaching, rigorous scholarship and diverse perspectives
+              cross boundaries and infuse NIC academics.
+            </em>
+          </p>
+          <button id="nic__split_content__left__button_one">
+            Browse Academic Programs
+          </button>
+          <button id="nic__split_content__left__button_two">
+            Browse Technical Programs
+          </button>
+        </div>
       </div>
 
-      <div class="container right__main_content">
-        <!-- Right Side on Desktop / Bottom on Mobile-->
-        <button class="button__brown_button_one">The College</button>
-        <button class="button__brown_button">Graduate School</button>
-        <button class="button__brown_button">Warren Alpert Medical School</button>
-        <button class="button__brown_button">School of Engineering</button>
-        <button class="button__brown_button">School of Public Health</button>
-        <button class="button__brown_button">School of Professional Studies</button>
+      <div class="nic__split_container__right">
+        <div class="nic__split_content__right">
+          <!-- Right Side on Desktop / Bottom on Mobile-->
+          <button id="nic__split_content__right_one">The College</button>
+          <button id="nic__split_content__right_two">Graduate School</button>
+          <button id="nic__split_content__right_three">
+            Warren Alpert Medical School
+          </button>
+          <button id="nic__split_content__right_four">
+            School of Engineering
+          </button>
+          <button id="nic__split_content__right_five">
+            School of Public Health
+          </button>
+          <button id="nic__split_content__right_six">
+            School of Professional Studies
+          </button>
+        </div>
       </div>
     </div>
+
+    <script>
+      window.addEventListener("resize", onResizeFunction);
+      window.addEventListener("load", onLoadFunction);
+
+      const buttonOne = document.getElementById("nic__split_content__right_one");
+      const buttonTwo = document.getElementById("nic__split_content__right_two");
+      const buttonThree = document.getElementById("nic__split_content__right_three");
+      const buttonFour = document.getElementById("nic__split_content__right_four");
+      const buttonFive = document.getElementById("nic__split_content__right_five");
+      const buttonSix = document.getElementById("nic__split_content__right_six");
+
+      const backGroundDiv = document.getElementById("nic__split_content");
+      const originalLeftContentDivStyle = document.getElementById("nic__split_content__left").style.display
+      const leftContentDiv = document.getElementById("nic__split_content__left");
+
+      const nic__split_content__left__alternate_display__one = document.getElementById("nic__split_content__left__alternate_display__one");
+      const nic__split_content__left__alternate_display__two = document.getElementById("nic__split_content__left__alternate_display__two");
+      const nic__split_content__left__alternate_display__three = document.getElementById("nic__split_content__left__alternate_display__three");
+      const nic__split_content__left__alternate_display__four = document.getElementById("nic__split_content__left__alternate_display__four");
+      const nic__split_content__left__alternate_display__five = document.getElementById("nic__split_content__left__alternate_display__five");
+      const nic__split_content__left__alternate_display__six = document.getElementById("nic__split_content__left__alternate_display__six");
+      
+
+
+      function onResizeFunction(e) {
+        const windowSize = window.innerWidth;
+        
+        
+
+        if (windowSize > 1200) {
+          // Button One Part One
+          buttonOne.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "url('images/bg2.jpg')";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = 'none';
+              nic__split_content__left__alternate_display__one.style.display = "flex";
+            },
+            false
+          );
+
+          buttonOne.addEventListener(
+            "mouseout",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle
+              nic__split_content__left__alternate_display__one.style.display = "none"
+            },
+            false
+          );
+          // End Button One Part One
+
+          // Button Two Part One
+          buttonTwo.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "url('images/bg3.jpg')";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = 'none'
+              nic__split_content__left__alternate_display__two.style.display = "flex"
+            },
+            false
+          );
+
+          buttonTwo.addEventListener(
+            "mouseout",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle
+              nic__split_content__left__alternate_display__two.style.display = "none"
+            },
+            false
+          );
+          // End Button Two Part One
+
+          // Button Three Part One
+          buttonThree.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "url('images/bg4.jpg')";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = 'none'
+              nic__split_content__left__alternate_display__three.style.display = "flex"
+            },
+            false
+          );
+
+          buttonThree.addEventListener(
+            "mouseout",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle
+              nic__split_content__left__alternate_display__three.style.display = "none"
+            },
+            false
+          );
+          // End Button Three Part One
+
+          // Button Four Part One
+          buttonFour.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "url('images/bg5.jpg')";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = 'none'
+              nic__split_content__left__alternate_display__four.style.display = "flex"
+            },
+            false
+          );
+
+          buttonFour.addEventListener(
+            "mouseout",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle
+              nic__split_content__left__alternate_display__four.style.display = "none"
+            },
+            false
+          );
+          // End Button Four Part One
+
+          // Button Five Part One
+          buttonFive.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "url('images/bg6.jpg')";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = 'none'
+              nic__split_content__left__alternate_display__five.style.display = "flex"
+            },
+            false
+          );
+
+          buttonFive.addEventListener(
+            "mouseout",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle
+              nic__split_content__left__alternate_display__five.style.display = "none"
+            },
+            false
+          );
+          // End Button Five Part One
+
+          // Button Six Part One
+          buttonSix.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "url('images/bg7.jpg')";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = 'none'
+              nic__split_content__left__alternate_display__six.style.display = "flex"
+            },
+            false
+          );
+
+          buttonSix.addEventListener(
+            "mouseout",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle
+              nic__split_content__left__alternate_display__six.style.display = "none"
+            },
+            false
+          );
+          // End Button Six Part One
+        } else {
+          // Button One Part Two
+          buttonOne.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle
+              nic__split_content__left__alternate_display__one.style.display = "none"
+            },
+            false
+          );
+          // End Button One Part Two
+
+          // Button Two Part Two
+          buttonTwo.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle
+              nic__split_content__left__alternate_display__two.style.display = "none"
+            },
+            false
+          );
+          // End Button Two Part Two
+
+          // Button Three Part Two
+          buttonThree.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle
+              nic__split_content__left__alternate_display__three.style.display = "none"
+            },
+            false
+          );
+          // End Button Three Part Two
+
+          // Button Four Part Two
+          buttonFour.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle
+              nic__split_content__left__alternate_display__four.style.display = "none"
+            },
+            false
+          );
+          // End Button Four Part Two
+
+          // Button Five Part Two
+          buttonFive.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle
+              nic__split_content__left__alternate_display__five.style.display = "none"
+            },
+            false
+          );
+          // End Button Five Part Two
+
+          // Button Six Part Two
+          buttonSix.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle
+              nic__split_content__left__alternate_display__six.style.display = "none"
+            },
+            false
+          );
+          // End Button Six Part Two
+        } 
+
+        
+      }
+
+      function onLoadFunction(e) {
+        const windowSize = window.innerWidth;
+
+        if (windowSize > 1200) {
+          // Button One
+          buttonOne.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "url('images/bg2.jpg')";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = 'none';
+              nic__split_content__left__alternate_display__one.style.display = "flex"
+            },
+            false
+          );
+
+          buttonOne.addEventListener(
+            "mouseout",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle;
+              nic__split_content__left__alternate_display__one.style.display = "none"
+              
+            },
+            false
+          );
+          // End Button One
+
+          // Button Two
+          buttonTwo.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "url('images/bg3.jpg')";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = 'none';
+              nic__split_content__left__alternate_display__two.style.display = "flex"
+            },
+            false
+          );
+
+          buttonTwo.addEventListener(
+            "mouseout",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle;
+              nic__split_content__left__alternate_display__two.style.display = "none"
+              
+            },
+            false
+          );
+          // End Button Two
+
+          // Button Three
+          buttonThree.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "url('images/bg4.jpg')";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = 'none';
+              nic__split_content__left__alternate_display__three.style.display = "flex"
+            },
+            false
+          );
+
+          buttonThree.addEventListener(
+            "mouseout",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle;
+              nic__split_content__left__alternate_display__three.style.display = "none"
+              
+            },
+            false
+          );
+          // End Button Three
+
+          // Button Four
+          buttonFour.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "url('images/bg5.jpg')";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = 'none';
+              nic__split_content__left__alternate_display__four.style.display = "flex"
+            },
+            false
+          );
+
+          buttonFour.addEventListener(
+            "mouseout",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle;
+              nic__split_content__left__alternate_display__four.style.display = "none"
+              
+            },
+            false
+          );
+          // End Button Four
+
+          // Button Five
+          buttonFive.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "url('images/bg6.jpg')";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = 'none';
+              nic__split_content__left__alternate_display__five.style.display = "flex"
+            },
+            false
+          );
+
+          buttonFive.addEventListener(
+            "mouseout",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle;
+              nic__split_content__left__alternate_display__five.style.display = "none"
+              
+            },
+            false
+          );
+          // End Button Five
+
+          // Button Six
+          buttonSix.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "url('images/bg7.jpg')";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = 'none';
+              nic__split_content__left__alternate_display__six.style.display = "flex"
+            },
+            false
+          );
+
+          buttonSix.addEventListener(
+            "mouseout",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle;
+              nic__split_content__left__alternate_display__six.style.display = "none"
+              
+            },
+            false
+          );
+          // End Button Six
+        }
+      }
+    </script>
   </body>
 </html>

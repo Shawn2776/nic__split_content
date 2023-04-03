@@ -5,440 +5,777 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      /* MOBILE SCREENS */
-      @media (max-width: 736px) {
-        .nic__split_content {
-          display: flex;
-          flex-flow: column;
-        }
-      }
-
-      /* SMALL SCREENS */
-      @media (max-width: 1200px) {
-        .nic__split_content {
-          display: flex;
-        }
-      }
-
-      /* LARGE SCREENS */
-      @media (min-width: 1201px) {
-        .nic__split_content__h1 {
-          font-size: 3rem;
-          /* color: #98002e; */
-        }
-
-        .nic__split_content {
-          display: flex;
-          height: 100vh;
-          background-image: url("bg.jpg");
-          background-repeat: no-repeat; /* Do not repeat the image */
-          background-size: cover; /* Resize the background image to cover the entire container */
-          /* filter: brightness(60%); */
-          background-position: center;
-          transition-delay: 0.2s;
-          transition: 0.5s;
-          color: white;
-        }
-
-        .nic__split_container__left {
-          display: flex;
-          flex-flow: column;
-          justify-content: center;
-          align-items: center;
-          width: 50%;
-          background-color: rgba(0, 0, 0, 0.4);
-        }
-
-        .nic__split_content__left {
-          display: flex;
-          flex-flow: column;
-          width: 45%;
-          justify-content: center;
-          align-items: start;
-          height: 100%;
-          /* margin-top: 10%; */
-        }
-
-        .nic__split_content__left > p {
-          font-size: 1.5rem;
-        }
-
-        .nic__split_content__left > button {
-          background-color: #98002e;
-          color: white;
-          font-size: 1rem;
-          padding: 20px 20px;
-          cursor: pointer;
-        }
-
-        #nic__split_content__left__button_one {
-          margin-top: 30px;
-          margin-bottom: 10px;
-        }
-
-        #nic__split_content__left__button_one:hover {
-          background-color: white;
-          color: #98002e;
-          transition: 0.5s;
-          cursor: pointer;
-        }
-
-        #nic__split_content__left__button_one,
-        #nic__split_content__left__button_two {
-          width: 80%;
-        }
-
-        #nic__split_content__left__button_two:hover {
-          background-color: white;
-          color: #98002e;
-          transition: 0.5s;
-        }
-
-        .nic__split_container__right {
-          display: flex;
-          width: 50%;
-        }
-
-        .nic__split_content__right {
-          position: relative;
-          display: flex;
-          /* justify-content: center;
-          align-items: center; */
-          flex-wrap: wrap;
-          padding: 300px 150px;
-          background-color: rgba(0, 0, 0, 0.7);
-          color: #fff;
-          width: 100%;
-        }
-
-        .nic__split_content__right > button {
-          background-color: transparent;
-          width: 50%;
-          border: none;
-          color: white;
-          font-size: larger;
-        }
-
-        .nic__split_content__right > button:nth-child(1) {
-          border-right: 1px solid white;
-          border-bottom: 1px solid white;
-        }
-
-        .nic__split_content__right > button:nth-child(1):hover {
-          background-color: #98002e;
-        }
-
-        .nic__split_content__right > button:nth-child(1):hover::after {
-          content: "";
-          border: solid white;
-          border-width: 0 3px 3px 0;
-          display: inline-block;
-          padding: 5px;
-          transform: rotate(-45deg);
-          -webkit-transform: rotate(-45deg);
-        }
-
-        .nic__split_content__right > button:nth-child(2) {
-          border-bottom: 1px solid white;
-        }
-
-        .nic__split_content__right > button:nth-child(2):hover {
-          background-color: #98002e;
-        }
-
-        .nic__split_content__right > button:nth-child(2):hover::after {
-          content: "";
-          border: solid white;
-          border-width: 0 3px 3px 0;
-          display: inline-block;
-          padding: 5px;
-          transform: rotate(-45deg);
-          -webkit-transform: rotate(-45deg);
-        }
-
-        .nic__split_content__right > button:nth-child(3) {
-          border-right: 1px solid white;
-          border-bottom: 1px solid white;
-        }
-
-        .nic__split_content__right > button:nth-child(3):hover {
-          background-color: #98002e;
-        }
-
-        .nic__split_content__right > button:nth-child(3):hover::after {
-          content: "";
-          border: solid white;
-          border-width: 0 3px 3px 0;
-          display: inline-block;
-          padding: 5px;
-          transform: rotate(-45deg);
-          -webkit-transform: rotate(-45deg);
-        }
-
-        .nic__split_content__right > button:nth-child(4) {
-          border-bottom: 1px solid white;
-        }
-
-        .nic__split_content__right > button:nth-child(4):hover {
-          background-color: #98002e;
-        }
-
-        .nic__split_content__right > button:nth-child(4):hover::after {
-          content: "";
-          border: solid white;
-          border-width: 0 3px 3px 0;
-          display: inline-block;
-          padding: 5px;
-          transform: rotate(-45deg);
-          -webkit-transform: rotate(-45deg);
-        }
-
-        .nic__split_content__right > button:nth-child(5) {
-          border-right: 1px solid white;
-        }
-
-        .nic__split_content__right > button:nth-child(5):hover {
-          background-color: #98002e;
-        }
-
-        .nic__split_content__right > button:nth-child(5):hover::after {
-          content: "";
-          border: solid white;
-          border-width: 0 3px 3px 0;
-          display: inline-block;
-          padding: 5px;
-          transform: rotate(-45deg);
-          -webkit-transform: rotate(-45deg);
-        }
-
-        .nic__split_content__right > button:nth-child(6):hover {
-          background-color: #98002e;
-        }
-
-        .nic__split_content__right > button:nth-child(6):hover::after {
-          content: "";
-          border: solid white;
-          border-width: 0 3px 3px 0;
-          display: inline-block;
-          padding: 5px;
-          transform: rotate(-45deg);
-          -webkit-transform: rotate(-45deg);
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="https://use.typekit.net/voj6uit.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="https://test.nic.edu/media/nic-main/css/main.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="https://test.nic.edu/media/nic-main/css/styles.css"
+    />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
   </head>
   <body>
+    <header class="header header--fixed">
+      <div class="header__container">
+        <div class="header__wrap">
+          <a href="/" class="header__logo">
+            
+            <!--  -->
+          </a>
+
+          <button class="header__menu-toggle">
+            <span class="screen-reader-text">Menu</span>
+            <span class="svg svg--menu header__menu-toggle__open"
+              ><svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 3h30v4H0zm0 10h30v4H0zm0 10h30v4H0z"></path></svg            ></span>
+            <span class="svg svg--close header__menu-toggle__close"
+              ><svg
+                viewBox="0 0 27.436 27.436"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.414 0L0 1.416l12.303 12.303L0 26.022l1.414 1.414 12.303-12.303 12.305 12.303 1.414-1.416-12.303-12.303L27.436 1.414 26.022.002 13.72 12.305 1.414 0z"
+                ></path></svg            ></span>
+          </button>
+          <div class="header__menu">
+            <div class="header__search-toggle-wrapper">
+              <button class="header__search-toggle">
+                <span class="screen-reader-text">Search</span>
+                <span class="svg svg--search header__search-toggle__open"
+                  ><svg
+                    viewBox="0 0 31.662 31.662"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13 26C5.8 26 0 20.2 0 13S5.8 0 13 0s13 5.8 13 13-5.8 13-13 13zm0-24C6.9 2 2 6.9 2 13s4.9 11 11 11 11-4.9 11-11S19.1 2 13 2zm9.682 19.267l8.98 8.98-1.414 1.414-8.98-8.98z"
+                    ></path></svg                ></span>
+                <span class="svg svg--close header__search-toggle__close"
+                  ><svg
+                    viewBox="0 0 27.436 27.436"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.414 0L0 1.416l12.303 12.303L0 26.022l1.414 1.414 12.303-12.303 12.305 12.303 1.414-1.416-12.303-12.303L27.436 1.414 26.022.002 13.72 12.305 1.414 0z"
+                    ></path></svg                ></span>
+              </button>
+
+              <a
+                href="/apply/"
+                class="button button--sm button--white-outline header__apply"
+                >Apply</a
+              >
+            </div>
+
+            
+
+            <div class="header__nav">
+              <a href="/" class="header__logo-fixed">
+                
+                <span class="svg svg--logo"
+                  ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 25">
+                    <path
+                      fill="#FFF"
+                      fill-rule="evenodd"
+                      d="M0 24.62L11.75 4.53l2.03 3.03L18.27 0 32.5 22.71c-3.92-.41-5.6-1.72-11.57.03-2.87.84-5.74.47-7.15.08-2.73-.76-5.74-.98-8.1-.91 0 0 .77-.77 2.76-.77h22.18L18.26 1.44l-4.48 7.57-2.03-3.03-9.99 17.14c2.68-.99 7.22-1.08 12.03.27 1.39.39 4.26.75 7.15-.08 6.13-1.77 7.72-.37 11.86 0l.09.01.82 1.31L0 24.62zM18.39 9.96c.49.72-.22 1.51-.81 2.03.25.12.29.16.54.27-.1.94-.83 1.77-1.35 2.18.25.12.29.16.54.27-.15.9-.52 1.32-.95 1.9.22.13.27.16.54.27-.32.7-.8 1.04-1.35 1.49.15.15.25.36.25.36s-.91.64-1.66.86c.16.34.3.6.3.6s-.67.34-1.06.43H26c-.78-.23-2.18-.86-1.35-1.15-.71-.27-1.83-1.48-1.9-2.31.16-.12.29-.23.41-.41-.84-.32-1.56-1.56-1.9-2.31.19-.13.34-.2.54-.27-.65-.87-1.57-1.64-.68-2.44-.65-.3-1.55-1.55-1.09-2.18-.45-.48-.64-.77-.81-1.35-.06.87-.31 1.3-.83 1.76zm-5.02 3.53c-.22.42-.39.7-.81.95.35.77.09 1.16-.68 1.63.17.25.29.36.41.68-.72.52-1.07.96-1.9 1.35.22.13.27.16.54.27-.22.55-.87.99-1.35 1.22.12.6-.52.86-1.09 1.02 2.28-.01 4.34.16 5.55-.6-.12-.35-.26-.56-.26-.56s1.19-.35 1.64-.78c-.1-.22-.25-.38-.25-.38s1.23-.76 1.32-1.32c-.48-.13-2.28-1.35-1.63-1.58-.49-.36-1.06-.84-.68-1.35-.43-.35-.55-.72-.68-1.22-.01.29-.03.43-.13.67z"
+                    ></path></svg                ></span>
+              </a>
+              <ul>
+                <li>
+                  <a href="/education-training/">Education &amp; Training</a>
+                </li>
+                <li><a href="/admissions-aid/">Admissions &amp; Aid</a></li>
+                <li><a href="/student-life/">Student Life</a></li>
+                <li>
+                  <a href="https://www.nicathletics.com/" target="_blank"
+                    >Athletics</a
+                  >
+                </li>
+                <li><a href="/community/">Community</a></li>
+              </ul>
+            </div>
+            <!-- <ul class="header__actions">
+              <li>
+                <a
+                  href="https://nic.elluciancrmrecruit.com/Apply/Account/Login?ReturnUrl=%2fApply"
+                  target="_self"
+                  >Request Info</a
+                >
+              </li>
+              <li><a href="/apply/">Get Started</a></li>
+              <li><a href="/admissions-aid/visit/">Visit Us</a></li>
+              <li><a href="/about/contact/">Contact</a></li>
+            </ul> -->
+            <div class="header__meta">
+              <button class="header__audience-toggle">
+                Info for
+                <span class="svg svg--caret-down header__meta__icon"
+                  ><svg
+                    viewBox="0 0 1024.5 1024.5"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1014.2 261.24l-476 558q-11 12-26 12t-26-12l-476-558q-16-19-7-43.5t33-24.5h952q24 0 33 24.5t-7 43.5z"
+                    ></path></svg                ></span>
+              </button>
+              <ul class="header__audience">
+                <li>
+                  <a href="/students/current-students/">Current Students</a>
+                </li>
+                <li><a href="https://my.nic.edu/" target="_self">MyNIC</a></li>
+                <li><a href="/community/alumni/">Alumni</a></li>
+              </ul>
+              <button class="header__resources-toggle">
+                Resources
+                <span
+                  class="svg svg--menu header__meta__icon header__resources-toggle__open"
+                  ><svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M0 3h30v4H0zm0 10h30v4H0zm0 10h30v4H0z"
+                    ></path></svg                ></span>
+                <span
+                  class="svg svg--close header__meta__icon header__resources-toggle__close"
+                  ><svg
+                    viewBox="0 0 27.436 27.436"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.414 0L0 1.416l12.303 12.303L0 26.022l1.414 1.414 12.303-12.303 12.305 12.303 1.414-1.416-12.303-12.303L27.436 1.414 26.022.002 13.72 12.305 1.414 0z"
+                    ></path></svg                ></span>
+              </button>
+              <div class="header__resources">
+                <button class="header__back">
+                  <span class="svg svg--angle-left header__back__icon"
+                    ><svg
+                      viewBox="0 0 100 100"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M79.158 8.317q0 1.302-1.002 2.304l-39.379 39.38 39.379 39.378q1.002 1.002 1.002 2.305t-1.002 2.304l-5.01 5.01Q72.144 100 70.841 100t-2.304-1.002L21.844 52.305q-1.002-1.002-1.002-2.304t1.002-2.305L68.537 1.003Q69.539.001 70.84.001t2.305 1.002l5.01 5.01q1.002 1.002 1.002 2.305z"
+                      ></path></svg                  ></span>
+                  Resources
+                </button>
+                <div class="header__switches">
+                  <button class="header__switch header__switch--active">
+                    Community Events
+                  </button>
+                  <button class="header__switch">Community Resources</button>
+                </div>
+                <div class="header__scroll">
+                  <div class="header__interior">
+                    <div class="header__resource header__resource--active">
+                      <p class="h6 header__heading">Community Events</p>
+                      <div class="header__image">
+                        <img src="//placehold.it/900x600" alt="" />
+                      </div>
+                      <ul class="header__events"></ul>
+                      <p class="header__cta">
+                        <a href="/events/" class="cta">View all events</a>
+                      </p>
+                    </div>
+                    <div class="header__resource">
+                      <p class="h6 header__heading">Community Resources</p>
+
+                      <ul class="header__posts">
+                        <li>
+                          <a href=""></a>
+                        </li>
+                        <li>
+                          <a href="/admissions-aid/accepted-students/"
+                            >Acceptance Next Steps</a
+                          >
+                        </li>
+                        <li>
+                          <a href="/education-training/"
+                            >Education &amp; Training</a
+                          >
+                        </li>
+                      </ul>
+                      <p class="header__cta">
+                        <a href="#" class="cta">Call to action</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
     <div id="nic__split_content" class="nic__split_content">
       <div class="nic__split_container__left">
-        <div class="nic__split_content__left">
+        <div
+          id="nic__split_content__left__alternate_display__one"
+          class="nic__split_content__left__alternate_display__one"
+          style="display: none"
+        >
+          <p>
+            NIC Has earned a global reputation for its innovative undergradute
+            educational experience, based in the college and rooted in its
+            flexibile, yet academically rigorous Open Cirriculum
+          </p>
+        </div>
+        <div
+          id="nic__split_content__left__alternate_display__two"
+          class="nic__split_content__left__alternate_display__two"
+          style="display: none"
+        >
+          <p>
+            With innovation, student-centered academic training and a diverse
+            and collaborative culture, NIC prepares graduate students to become
+            leaders in their fields inside and outside of the college.
+          </p>
+        </div>
+        <div
+          id="nic__split_content__left__alternate_display__three"
+          class="nic__split_content__left__alternate_display__three"
+          style="display: none"
+        >
+          <p>
+            NIC's renowned medical school offers an integrated medical
+            cirriculum alongside immersive clinical experiences, where students
+            work with physician-scientitsts on the leading edge of biomedical
+            innovation.
+          </p>
+        </div>
+        <div
+          id="nic__split_content__left__alternate_display__four"
+          class="nic__split_content__left__alternate_display__four"
+          style="display: none"
+        >
+          <p>
+            NIC educates future leaders in the fundamentals of engineering in an
+            environment of collaborative, world-class research centered on
+            solving pressing global challenges.
+          </p>
+        </div>
+        <div
+          id="nic__split_content__left__alternate_display__five"
+          class="nic__split_content__left__alternate_display__five"
+          style="display: none"
+        >
+          <p>
+            Throughout its teaching and research, NIC trains future public
+            health leaders, advances knowledge on pressing health challenges and
+            enhances population health and well-being.
+          </p>
+        </div>
+        <div
+          id="nic__split_content__left__alternate_display__six"
+          class="nic__split_content__left__alternate_display__six"
+          style="display: none"
+        >
+          <p>
+            NIC's School of blah blah blah offers executive education programs
+            designed to advance the careers of accomplished professionals from
+            across the globe.
+          </p>
+        </div>
+        <div class="nic__split_content__left" id="nic__split_content__left">
           <!-- Left Side on Desktop / Top on Mobile-->
-          <h1 class="nic__split_content__h1">
+          <h1 class="nic__split_content__left__h1">
             Academics at
             <br />
             North Idaho College
           </h1>
-          <p>
+          <p class="nic__split_content__left__p">
             <em>
-              Innovative teaching, rigorous scholarship and diverse perspectives
-              cross boundaries and infuse NIC academics.
+              <strong>Innovative teaching, rigorous scholarship and diverse perspectives
+                cross boundaries and infuse NIC academics.</strong>
             </em>
           </p>
-          <button id="nic__split_content__left__button_one">
-            Browse Academic Programs
-          </button>
-          <button id="nic__split_content__left__button_two">
-            Browse Technical Programs
-          </button>
+          <div class="nic__split_content__left__buttons">
+            <a
+              href="https://test.nic.edu"
+              class="button"
+              id="nic__split_content__left__button_one"
+            >
+              Browse Academic Programs
+            </a>
+            <a
+              class="button"
+              id="nic__split_content__left__button_two"
+              href="https://test.nic.edu"
+            >
+              Browse Technical Programs
+            </a>
+          </div>
         </div>
       </div>
 
       <div class="nic__split_container__right">
         <div class="nic__split_content__right">
           <!-- Right Side on Desktop / Bottom on Mobile-->
-          <button id="nic__split_content__right_one">The College</button>
-          <button id="nic__split_content__right_two">Graduate School</button>
-          <button id="nic__split_content__right_three">
-            Warren Alpert Medical School
-          </button>
-          <button id="nic__split_content__right_four">
-            School of Engineering
-          </button>
-          <button id="nic__split_content__right_five">
-            School of Public Health
-          </button>
-          <button id="nic__split_content__right_six">
-            School of Professional Studies
-          </button>
+          <a class="button nic__split_content__right_one" href="https://test.nic.edu" id="nic__split_content__right_one"
+            >The College</a
+          >
+          <a class="button nic__split_content__right_two" href="https://test.nic.edu/wtc" id="nic__split_content__right_two"
+            >Workforce Training</a
+          >
+          <a class="button nic__split_content__right_three" href="https://test.nic.edu/cte" id="nic__split_content__right_three">
+            Career and Technical
+          </a>
+          <a class="button nic__split_content__right_four" href="https://test.nic.edu/outdoor" id="nic__split_content__right_four">
+            Outdoor Pursuits
+          </a>
+          <a class="button nic__split_content__right_five" href="https://test.nic.edu/library" id="nic__split_content__right_five">
+            Molstead Library
+          </a>
+          <a class="button nic__split_content__right_six" href="https://test.nic.edu/emerys" id="nic__split_content__right_six">
+            Culinary Arts
+          </a>
         </div>
       </div>
     </div>
 
     <script>
-      const container = document.querySelector(".nic__split_content");
+      window.addEventListener("resize", onResizeFunction);
+      window.addEventListener("load", onLoadFunction);
 
-      const observer = new ResizeObserver((entries) => {
-        const mainElement = entries[0];
-        const isLarge = mainElement.contentRect.width > 1201;
+      const buttonOne = document.getElementById("nic__split_content__right_one");
+      const buttonTwo = document.getElementById("nic__split_content__right_two");
+      const buttonThree = document.getElementById("nic__split_content__right_three");
+      const buttonFour = document.getElementById("nic__split_content__right_four");
+      const buttonFive = document.getElementById("nic__split_content__right_five");
+      const buttonSix = document.getElementById("nic__split_content__right_six");
 
+      const backGroundDiv = document.getElementById("nic__split_content");
+      const originalLeftContentDivStyle = document.getElementById("nic__split_content__left").style.display
+      const leftContentDiv = document.getElementById("nic__split_content__left");
+
+      const nic__split_content__left__alternate_display__one = document.getElementById("nic__split_content__left__alternate_display__one");
+      const nic__split_content__left__alternate_display__two = document.getElementById("nic__split_content__left__alternate_display__two");
+      const nic__split_content__left__alternate_display__three = document.getElementById("nic__split_content__left__alternate_display__three");
+      const nic__split_content__left__alternate_display__four = document.getElementById("nic__split_content__left__alternate_display__four");
+      const nic__split_content__left__alternate_display__five = document.getElementById("nic__split_content__left__alternate_display__five");
+      const nic__split_content__left__alternate_display__six = document.getElementById("nic__split_content__left__alternate_display__six");
+      
+
+
+      function onResizeFunction(e) {
+        const windowSize = window.innerWidth;
+        
         
 
+        if (windowSize > 1200) {
+          // Button One Part One
+          buttonOne.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "url('images/bg2.jpg')";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = 'none';
+              nic__split_content__left__alternate_display__one.style.display = "flex";
+            },
+            false
+          );
 
-        if (isLarge) {
-          document
-            .getElementById("nic__split_content__right_one")
-            .addEventListener("mouseover", function () {
-                document.getElementById("nic__split_content").style.backgroundImage = "url('bg2.jpeg')";
-              },
-              false
-            );
+          buttonOne.addEventListener(
+            "mouseout",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle
+              nic__split_content__left__alternate_display__one.style.display = "none"
+            },
+            false
+          );
+          // End Button One Part One
 
-          document
-            .getElementById("nic__split_content__right_one").addEventListener("mouseout", function () {
-                document.getElementById(
-                  "nic__split_content"
-                ).style.backgroundImage = "";
-              },
-              false
-            );
+          // Button Two Part One
+          buttonTwo.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "url('images/bg3.jpg')";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = 'none'
+              nic__split_content__left__alternate_display__two.style.display = "flex"
+            },
+            false
+          );
 
-          document
-            .getElementById("nic__split_content__right_two")
-            .addEventListener(
-              "mouseover",
-              function () {
-                document.getElementById(
-                  "nic__split_content"
-                ).style.backgroundImage = "url('overview.jpg')";
-                document.getElementById(
-                  "nic__split_content"
-                ).style.backgroundImage = "url('overview.jpg')";
-              },
-              false
-            );
-          document
-            .getElementById("nic__split_content__right_two")
-            .addEventListener(
-              "mouseout",
-              function () {
-                document.getElementById(
-                  "nic__split_content"
-                ).style.backgroundImage = "";
-              },
-              false
-            );
+          buttonTwo.addEventListener(
+            "mouseout",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle
+              nic__split_content__left__alternate_display__two.style.display = "none"
+            },
+            false
+          );
+          // End Button Two Part One
 
-          document
-            .getElementById("nic__split_content__right_three")
-            .addEventListener(
-              "mouseover",
-              function () {
-                document.getElementById(
-                  "nic__split_content"
-                ).style.backgroundImage = "url('NICStudents.jpg')";
-              },
-              false
-            );
-          document
-            .getElementById("nic__split_content__right_three")
-            .addEventListener(
-              "mouseout",
-              function () {
-                document.getElementById(
-                  "nic__split_content"
-                ).style.backgroundImage = "";
-              },
-              false
-            );
+          // Button Three Part One
+          buttonThree.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "url('images/bg4.jpg')";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = 'none'
+              nic__split_content__left__alternate_display__three.style.display = "flex"
+            },
+            false
+          );
 
-          document
-            .getElementById("nic__split_content__right_four")
-            .addEventListener(
-              "mouseover",
-              function () {
-                document.getElementById(
-                  "nic__split_content"
-                ).style.backgroundImage =
-                  "url('cropped-portrait-of-a-young-male-university-studen-2022-12-30-00-29-25-utc-900x900.jpg')";
-              },
-              false
-            );
-          document
-            .getElementById("nic__split_content__right_four")
-            .addEventListener(
-              "mouseout",
-              function () {
-                document.getElementById(
-                  "nic__split_content"
-                ).style.backgroundImage = "";
-              },
-              false
-            );
+          buttonThree.addEventListener(
+            "mouseout",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle
+              nic__split_content__left__alternate_display__three.style.display = "none"
+            },
+            false
+          );
+          // End Button Three Part One
 
-          document
-            .getElementById("nic__split_content__right_five")
-            .addEventListener(
-              "mouseover",
-              function () {
-                document.getElementById(
-                  "nic__split_content"
-                ).style.backgroundImage =
-                  "url('220316_ParkerTourGEDSTs-133-2552x2551.jpg')";
-              },
-              false
-            );
-          document
-            .getElementById("nic__split_content__right_five")
-            .addEventListener(
-              "mouseout",
-              function () {
-                document.getElementById(
-                  "nic__split_content"
-                ).style.backgroundImage = "";
-              },
-              false
-            );
+          // Button Four Part One
+          buttonFour.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "url('images/bg5.jpg')";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = 'none'
+              nic__split_content__left__alternate_display__four.style.display = "flex"
+            },
+            false
+          );
 
-          document
-            .getElementById("nic__split_content__right_six")
-            .addEventListener(
-              "mouseover",
-              function () {
-                document.getElementById(
-                  "nic__split_content"
-                ).style.backgroundImage =
-                  "url('900x900_young-plumber-or-technician-installing-or-repairin-2021-09-24-03-09-40-utc.jpg')";
-              },
-              false
-            );
+          buttonFour.addEventListener(
+            "mouseout",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle
+              nic__split_content__left__alternate_display__four.style.display = "none"
+            },
+            false
+          );
+          // End Button Four Part One
 
-          document
-            .getElementById("nic__split_content__right_six")
-            .addEventListener(
-              "mouseover",
-              function () {
-                document.getElementById(
-                  "nic__split_content__left"
-                ).style.display = "none";
-              },
-              false
-            );
+          // Button Five Part One
+          buttonFive.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "url('images/bg6.jpg')";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = 'none'
+              nic__split_content__left__alternate_display__five.style.display = "flex"
+            },
+            false
+          );
 
-          document
-            .getElementById("nic__split_content__right_six")
-            .addEventListener(
-              "mouseout",
-              function () {
-                document.getElementById(
-                  "nic__split_content"
-                ).style.backgroundImage = "";
-              },
-              false
-            );
+          buttonFive.addEventListener(
+            "mouseout",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle
+              nic__split_content__left__alternate_display__five.style.display = "none"
+            },
+            false
+          );
+          // End Button Five Part One
+
+          // Button Six Part One
+          buttonSix.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "url('images/bg7.jpg')";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = 'none'
+              nic__split_content__left__alternate_display__six.style.display = "flex"
+            },
+            false
+          );
+
+          buttonSix.addEventListener(
+            "mouseout",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle
+              nic__split_content__left__alternate_display__six.style.display = "none"
+            },
+            false
+          );
+          // End Button Six Part One
+        } else {
+          // Button One Part Two
+          buttonOne.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle
+              nic__split_content__left__alternate_display__one.style.display = "none"
+            },
+            false
+          );
+          // End Button One Part Two
+
+          // Button Two Part Two
+          buttonTwo.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle
+              nic__split_content__left__alternate_display__two.style.display = "none"
+            },
+            false
+          );
+          // End Button Two Part Two
+
+          // Button Three Part Two
+          buttonThree.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle
+              nic__split_content__left__alternate_display__three.style.display = "none"
+            },
+            false
+          );
+          // End Button Three Part Two
+
+          // Button Four Part Two
+          buttonFour.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle
+              nic__split_content__left__alternate_display__four.style.display = "none"
+            },
+            false
+          );
+          // End Button Four Part Two
+
+          // Button Five Part Two
+          buttonFive.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle
+              nic__split_content__left__alternate_display__five.style.display = "none"
+            },
+            false
+          );
+          // End Button Five Part Two
+
+          // Button Six Part Two
+          buttonSix.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle
+              nic__split_content__left__alternate_display__six.style.display = "none"
+            },
+            false
+          );
+          // End Button Six Part Two
+        } 
+
+        
+      }
+
+      function onLoadFunction(e) {
+        const windowSize = window.innerWidth;
+
+        if (windowSize > 1200) {
+          // Button One
+          buttonOne.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "url('images/bg2.jpg')";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = 'none';
+              nic__split_content__left__alternate_display__one.style.display = "flex"
+            },
+            false
+          );
+
+          buttonOne.addEventListener(
+            "mouseout",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle;
+              nic__split_content__left__alternate_display__one.style.display = "none"
+              
+            },
+            false
+          );
+          // End Button One
+
+          // Button Two
+          buttonTwo.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "url('images/bg3.jpg')";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = 'none';
+              nic__split_content__left__alternate_display__two.style.display = "flex"
+            },
+            false
+          );
+
+          buttonTwo.addEventListener(
+            "mouseout",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle;
+              nic__split_content__left__alternate_display__two.style.display = "none"
+              
+            },
+            false
+          );
+          // End Button Two
+
+          // Button Three
+          buttonThree.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "url('images/bg4.jpg')";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = 'none';
+              nic__split_content__left__alternate_display__three.style.display = "flex"
+            },
+            false
+          );
+
+          buttonThree.addEventListener(
+            "mouseout",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle;
+              nic__split_content__left__alternate_display__three.style.display = "none"
+              
+            },
+            false
+          );
+          // End Button Three
+
+          // Button Four
+          buttonFour.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "url('images/bg5.jpg')";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = 'none';
+              nic__split_content__left__alternate_display__four.style.display = "flex"
+            },
+            false
+          );
+
+          buttonFour.addEventListener(
+            "mouseout",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle;
+              nic__split_content__left__alternate_display__four.style.display = "none"
+              
+            },
+            false
+          );
+          // End Button Four
+
+          // Button Five
+          buttonFive.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "url('images/bg6.jpg')";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = 'none';
+              nic__split_content__left__alternate_display__five.style.display = "flex"
+            },
+            false
+          );
+
+          buttonFive.addEventListener(
+            "mouseout",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle;
+              nic__split_content__left__alternate_display__five.style.display = "none"
+              
+            },
+            false
+          );
+          // End Button Five
+
+          // Button Six
+          buttonSix.addEventListener(
+            "mouseover",
+            function () {
+              backGroundDiv.style.backgroundImage = "url('images/bg7.jpg')";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = 'none';
+              nic__split_content__left__alternate_display__six.style.display = "flex"
+            },
+            false
+          );
+
+          buttonSix.addEventListener(
+            "mouseout",
+            function () {
+              backGroundDiv.style.backgroundImage = "";
+              backGroundDiv.style.transition = "all .3s ease-in-out";
+              backGroundDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+              leftContentDiv.style.display = originalLeftContentDivStyle;
+              nic__split_content__left__alternate_display__six.style.display = "none"
+              
+            },
+            false
+          );
+          // End Button Six
         }
-      });
-
-      observer.observe(container);
+      }
     </script>
   </body>
 </html>
